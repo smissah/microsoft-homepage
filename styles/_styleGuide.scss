@@ -85,3 +85,11 @@ body {
 .hidden {
   display: none;
 }
+
+.dark-mode {
+  filter: invert(1) hue-rotate(180);
+}
+
+.dm-inverted {
+  filter: invert(1) hue-rotate(180);
+}

@@ -49,6 +49,14 @@ body {
   display: none;
 }
 
+.dark-mode {
+  filter: invert(1) hue-rotate(180);
+}
+
+.dm-inverted {
+  filter: invert(1) hue-rotate(180);
+}
+
 a {
   color: #1a1a1a;
 }
