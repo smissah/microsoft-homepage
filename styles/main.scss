@@ -3,48 +3,12 @@
 a {
   color: $clr-links;
 }
-@keyframes openUp {
-  0% {
-    width: 1%;
-    height: 0;
-    display: none;
-    overflow: hidden;
-    a {
-      opacity: 0;
-    }
-  }
-
-  50% {
-    width: 30%;
-    display: block !important;
-    height: 1rem;
-  }
-
-  75% {
-    width: 30%;
-
-    height: 20.7rem;
-    li {
-      opacity: 0;
-    }
-  }
-
-  100% {
-    padding: 0 $padding-small;
-    // li {
-    //   opacity: 1;
-    //   padding: 0 $padding-medium;
-    // }
-    width: 32%;
-    height: 44.1rem;
-  }
-}
 
 .menu-overlay {
   position: absolute;
   z-index: 100;
   top: 1.8rem;
-  left: 2.3rem;
+  left: 2rem;
 
   //!original width and height
   // width: 30%;
@@ -55,9 +19,9 @@ a {
   display: none;
   padding: 0.5rem;
 
-  background: rgba(255, 255, 255, 0.705);
-  backdrop-filter: blur(15px);
-  // overflow: hidden;
+  background: rgba(255, 255, 255, 0.952);
+  background-blend-mode: screen;
+  // backdrop-filter: blur(15px);
 
   li {
     display: flex;
@@ -70,12 +34,15 @@ a {
     margin: 0 0.5rem 0 0.5rem;
 
     a {
-      // margin-bottom: $margin-medium;
       margin: 1rem 0.5rem;
       text-align: center;
-
       padding-bottom: $padding-xxSmall;
       transition: border-bottom $transition-fast;
+      background: none;
+      animation-name: fadeIn;
+      animation-duration: 0.25s;
+      animation-direction: forwards;
+      // animation-fill-mode: forwards;
 
       border-bottom: none;
       &:hover {
@@ -88,14 +55,13 @@ a {
 
 .active {
   display: block;
-  background: rgba(255, 255, 255, 0.705);
-  backdrop-filter: blur(15px);
   animation-name: openUp;
   animation-duration: 0.25s;
   animation-direction: forwards;
   animation-fill-mode: forwards;
-  width: 32%;
-  height: 44.1rem;
+  // width: 31%;
+
+  // height: 44.2rem;
 }
 .container {
   width: 90%;
@@ -198,6 +164,7 @@ a {
     color: rgb(15, 133, 230);
     text-transform: uppercase;
     font-weight: bold;
+    font-size: 1.1rem;
     transition: margin $transition-fast;
 
     &:hover i {
