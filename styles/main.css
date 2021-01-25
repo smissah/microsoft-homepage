@@ -178,11 +178,35 @@ a {
 
 .container .main-nav .right-icons {
   display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .container .main-nav .right-icons i {
   padding: 2rem 0.25rem;
   margin-left: 1.5rem;
+}
+
+.container .main-nav .right-icons .search-field {
+  position: absolute;
+  right: 3.5rem;
+  z-index: -1;
+  height: 2.5rem;
+  width: 20rem;
+  border: 2px solid black;
+  padding: 0.01rem 2.6rem 0.01rem 2rem;
+  outline: none;
+  transform: translateY(60%);
+  transition: width 0.3s ease-in-out;
+}
+
+.container .main-nav .right-icons .search-field:hover {
+  background: #ebebeb;
+}
+
+.container .main-nav .right-icons .compressed {
+  width: 0;
+  opacity: 0;
 }
 
 .container .showcase {
