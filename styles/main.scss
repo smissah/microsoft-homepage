@@ -19,7 +19,8 @@ a {
   display: none;
   padding: 0.5rem;
 
-  background: rgba(255, 255, 255, 0.884);
+  background: rgba(255, 255, 255, 0.952);
+  background-blend-mode: screen;
   // backdrop-filter: blur(15px);
 
   li {
@@ -54,14 +55,13 @@ a {
 
 .active {
   display: block;
-  // background: rgba(255, 255, 255, 0.705);
-  // backdrop-filter: blur(15px);
   animation-name: openUp;
   animation-duration: 0.25s;
   animation-direction: forwards;
   animation-fill-mode: forwards;
-  width: 32%;
-  height: 44.1rem;
+  // width: 31%;
+
+  // height: 44.2rem;
 }
 .container {
   width: 90%;
@@ -164,6 +164,7 @@ a {
     color: rgb(15, 133, 230);
     text-transform: uppercase;
     font-weight: bold;
+    font-size: 1.1rem;
     transition: margin $transition-fast;
 
     &:hover i {

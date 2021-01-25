@@ -17,8 +17,8 @@
   }
   100% {
     padding: 0 2rem;
-    width: 32%;
-    height: 44.1rem;
+    width: 31%;
+    height: 44.2rem;
     opacity: 1;
   }
 }
@@ -96,7 +96,8 @@ a {
   height: 0;
   display: none;
   padding: 0.5rem;
-  background: rgba(255, 255, 255, 0.884);
+  background: rgba(255, 255, 255, 0.952);
+  background-blend-mode: screen;
 }
 
 .menu-overlay li {
@@ -131,8 +132,6 @@ a {
   animation-duration: 0.25s;
   animation-direction: forwards;
   animation-fill-mode: forwards;
-  width: 32%;
-  height: 44.1rem;
 }
 
 .container {
@@ -234,6 +233,7 @@ a {
   color: #0f85e6;
   text-transform: uppercase;
   font-weight: bold;
+  font-size: 1.1rem;
   transition: margin 100ms ease-in-out;
 }
 
