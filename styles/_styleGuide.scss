@@ -1,0 +1,87 @@
+//padding
+
+$padding-xxSmall: 0.25rem;
+$padding-xSmall: 1rem;
+$padding-small: 2rem;
+$padding-medium: 3rem;
+$padding-large: 3.5rem;
+$padding-xLarge: 4rem;
+$padding-xxLarge: 6rem;
+
+// colors
+$clr-links: rgb(26, 26, 26);
+$clr-para: rgb(14, 14, 14);
+$clr-button: rgb(26, 26, 26);
+
+// font-size
+$fontSize-para: 1.6rem;
+$fontSize-menu: 1.3rem;
+
+//margins
+$margin-xxSmall: 0.25rem;
+$margin-xSmall: 1rem;
+$margin-small: 1.5rem;
+$margin-medium: 2rem;
+$margin-large: 3rem;
+$margin-xLarge: 4rem;
+
+//animation speed
+
+$transition-fast: 100ms ease-in-out;
+
+// other
+
+$bannerHeight: 40rem;
+
+//!---------------------------------------------------------------------------------!//
+html {
+  font-size: 62.5%;
+  //1rem =10px
+  height: 100%;
+  width: 100%;
+}
+
+* {
+  list-style-type: none;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "segoe UI", "Tahoma", Geneva, Verdana, sans-serif;
+  background: white;
+  font-size: $fontSize-para;
+  color: $clr-para;
+  transition: all 0.3s ease-in-out;
+  position: relative;
+}
+
+.btn {
+  border: 0;
+  background: rgb(26, 26, 26);
+  color: white;
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  outline: none;
+  padding: $padding-xSmall $padding-small;
+
+  &:hover {
+    background: lighten($clr-button, 5%);
+  }
+}
+
+.dark {
+  color: white;
+  //!if dark do that ^
+  .btn {
+    background-color: white;
+    color: black;
+    //! theres a button with a dark - style it like this^
+  }
+}
+
+.hidden {
+  display: none;
+}
