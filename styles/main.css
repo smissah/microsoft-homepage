@@ -47,6 +47,7 @@ html {
 }
 
 body {
+  min-width: 305px;
   font-family: "segoe UI", "Tahoma", Geneva, Verdana, sans-serif;
   background: white;
   font-size: 1.6rem;
@@ -132,6 +133,7 @@ a {
   animation-duration: 0.25s;
   animation-direction: forwards;
   animation-fill-mode: forwards;
+  width: 31%;
 }
 
 .container {
@@ -177,6 +179,7 @@ a {
 }
 
 .container .main-nav .right-icons {
+  position: relative;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -189,24 +192,22 @@ a {
 
 .container .main-nav .right-icons .search-field {
   position: absolute;
-  right: 3.5rem;
-  z-index: -1;
+  right: 3rem;
+  display: inline-block !important;
   height: 2.5rem;
   width: 20rem;
   border: 2px solid black;
   padding: 0.01rem 2.6rem 0.01rem 2rem;
   outline: none;
-  transform: translateY(60%);
-  transition: width 0.3s ease-in-out;
-}
-
-.container .main-nav .right-icons .search-field:hover {
-  background: #ebebeb;
+  background: white;
+  transition: all 0.3s ease-in-out;
 }
 
 .container .main-nav .right-icons .compressed {
+  display: none;
   width: 0;
   opacity: 0;
+  z-index: -1;
 }
 
 .container .showcase {
@@ -378,6 +379,9 @@ a {
 }
 
 @media (max-width: 720px) {
+  .main-nav {
+    position: relative;
+  }
   .main-nav i {
     font-size: 1.75rem;
   }
@@ -389,13 +393,13 @@ a {
   }
   .main-nav .logo {
     position: absolute;
+    z-index: -1;
     left: 50%;
     transform: translateX(-50%);
   }
   .main-nav .right-icons {
-    position: absolute;
-    right: 0;
-    transform: translateX(-50%);
+    position: absolute !important;
+    right: 0%;
   }
   .main-nav a {
     border-bottom: 1px !important;

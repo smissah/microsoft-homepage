@@ -94,6 +94,7 @@ html {
   box-sizing: border-box;
 }
 body {
+  min-width: 305px;
   font-family: "segoe UI", "Tahoma", Geneva, Verdana, sans-serif;
   background: white;
   font-size: $fontSize-para;

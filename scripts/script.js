@@ -33,6 +33,11 @@ searchBtn.addEventListener("click", () => {
   searchField.classList.toggle("compressed");
 });
 
-searchField.addEventListener("blur", () => {
-  searchField.classList.toggle("compressed");
-});
+searchField.addEventListener(
+  "blur",
+  (event) => {
+    searchField.classList.toggle("compressed");
+    event.stopPropagation();
+  },
+  true
+);

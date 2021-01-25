@@ -59,7 +59,7 @@ a {
   animation-duration: 0.25s;
   animation-direction: forwards;
   animation-fill-mode: forwards;
-  // width: 31%;
+  width: 31%;
 
   // height: 44.2rem;
 }
@@ -104,6 +104,7 @@ a {
     }
 
     .right-icons {
+      position: relative;
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -114,25 +115,28 @@ a {
 
       .search-field {
         position: absolute;
-        right: 3.5rem;
+        right: 3rem;
+        // right: 0;
         // bottom: 1.6rem;
-        z-index: -1;
+        // top: 1.6rem;
+        // z-index: 1;
+        display: inline-block !important;
         height: 2.5rem;
         width: 20rem;
+
         border: 2px solid black;
         padding: 0.01rem 2.6rem 0.01rem 2rem;
         outline: none;
-        transform: translateY(60%);
-        transition: width 0.3s ease-in-out;
+        background: rgb(255, 255, 255);
 
-        &:hover {
-          background: rgb(235, 235, 235);
-        }
+        transition: all 0.3s ease-in-out;
       }
 
       .compressed {
+        display: none;
         width: 0;
         opacity: 0;
+        z-index: -1;
       }
     }
   }
@@ -315,6 +319,8 @@ a {
 
 @media (max-width: 720px) {
   .main-nav {
+    position: relative;
+
     i {
       font-size: 1.75rem;
     }
@@ -326,14 +332,15 @@ a {
     }
     .logo {
       position: absolute;
+      z-index: -1;
       left: 50%;
       transform: translateX(-50%);
     }
 
     .right-icons {
-      position: absolute;
-      right: 0;
-      transform: translateX(-50%);
+      position: absolute !important;
+      right: 0%;
+      // transform: translateX(-50%);
     }
 
     a {
