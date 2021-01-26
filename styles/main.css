@@ -1,3 +1,37 @@
+@keyframes openUp {
+  0% {
+    width: 1%;
+    height: 0;
+    display: none;
+    overflow: hidden;
+  }
+  50% {
+    width: 30%;
+    display: block !important;
+    height: 1rem;
+  }
+  75% {
+    width: 30%;
+    height: 20.7rem;
+    opacity: 0.4;
+  }
+  100% {
+    padding: 0 2rem;
+    width: 31%;
+    height: 44.2rem;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 html {
   font-size: 62.5%;
   height: 100%;
@@ -13,6 +47,7 @@ html {
 }
 
 body {
+  min-width: 305px;
   font-family: "segoe UI", "Tahoma", Geneva, Verdana, sans-serif;
   background: white;
   font-size: 1.6rem;
@@ -49,58 +84,21 @@ body {
   display: none;
 }
 
-.dark-mode {
-  filter: invert(1) hue-rotate(180);
-}
-
-.dm-inverted {
-  filter: invert(1) hue-rotate(180);
-}
-
 a {
   color: #1a1a1a;
-}
-
-@keyframes openUp {
-  0% {
-    width: 1%;
-    height: 0;
-    display: none;
-    overflow: hidden;
-    a {
-      opacity: 0;
-    }
-  }
-  50% {
-    width: 30%;
-    display: block !important;
-    height: 1rem;
-  }
-  75% {
-    width: 30%;
-    height: 20.7rem;
-    li {
-      opacity: 0;
-    }
-  }
-  100% {
-    padding: 0 2rem;
-    width: 32%;
-    height: 44.1rem;
-  }
 }
 
 .menu-overlay {
   position: absolute;
   z-index: 100;
   top: 1.8rem;
-  left: 2.3rem;
+  left: 2rem;
   width: 0;
   height: 0;
   display: none;
   padding: 0.5rem;
-  background: rgba(255, 255, 255, 0.705);
-  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.952);
+  background-blend-mode: screen;
 }
 
 .menu-overlay li {
@@ -117,6 +115,10 @@ a {
   text-align: center;
   padding-bottom: 0.25rem;
   transition: border-bottom 100ms ease-in-out;
+  background: none;
+  animation-name: fadeIn;
+  animation-duration: 0.25s;
+  animation-direction: forwards;
   border-bottom: none;
 }
 
@@ -127,14 +129,11 @@ a {
 
 .active {
   display: block;
-  background: rgba(255, 255, 255, 0.705);
-  backdrop-filter: blur(15px);
   animation-name: openUp;
   animation-duration: 0.25s;
   animation-direction: forwards;
   animation-fill-mode: forwards;
-  width: 32%;
-  height: 44.1rem;
+  width: 31%;
 }
 
 .container {
@@ -180,12 +179,35 @@ a {
 }
 
 .container .main-nav .right-icons {
+  position: relative;
   display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .container .main-nav .right-icons i {
   padding: 2rem 0.25rem;
   margin-left: 1.5rem;
+}
+
+.container .main-nav .right-icons .search-field {
+  position: absolute;
+  right: 3rem;
+  display: inline-block !important;
+  height: 2.5rem;
+  width: 20rem;
+  border: 2px solid black;
+  padding: 0.01rem 2.6rem 0.01rem 2rem;
+  outline: none;
+  background: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.container .main-nav .right-icons .compressed {
+  display: none;
+  width: 0;
+  opacity: 0;
+  z-index: -1;
 }
 
 .container .showcase {
@@ -236,6 +258,7 @@ a {
   color: #0f85e6;
   text-transform: uppercase;
   font-weight: bold;
+  font-size: 1.1rem;
   transition: margin 100ms ease-in-out;
 }
 
@@ -356,6 +379,9 @@ a {
 }
 
 @media (max-width: 720px) {
+  .main-nav {
+    position: relative;
+  }
   .main-nav i {
     font-size: 1.75rem;
   }
@@ -367,13 +393,13 @@ a {
   }
   .main-nav .logo {
     position: absolute;
+    z-index: -1;
     left: 50%;
     transform: translateX(-50%);
   }
   .main-nav .right-icons {
-    position: absolute;
-    right: 0;
-    transform: translateX(-50%);
+    position: absolute !important;
+    right: 0%;
   }
   .main-nav a {
     border-bottom: 1px !important;

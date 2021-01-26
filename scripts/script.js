@@ -1,7 +1,8 @@
 const navCollapsed = document.querySelector(".collapsed");
 const navOpen = document.querySelector(".open");
 const menuOverlay = document.querySelector(".menu-overlay");
-
+const searchBtn = document.querySelector(".fa-search");
+const searchField = document.querySelector(".search-field");
 //!when the tacked menu is clicked
 navCollapsed.addEventListener("click", () => {
   navCollapsed.classList.toggle("hidden");
@@ -27,3 +28,16 @@ menuOverlay.addEventListener("mouseleave", () => {
   navOpen.classList.toggle("hidden");
   menuOverlay.classList.remove("active");
 });
+
+searchBtn.addEventListener("click", () => {
+  searchField.classList.toggle("compressed");
+});
+
+searchField.addEventListener(
+  "blur",
+  (event) => {
+    searchField.classList.toggle("compressed");
+    event.stopPropagation();
+  },
+  true
+);

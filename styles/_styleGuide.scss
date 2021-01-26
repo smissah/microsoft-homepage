@@ -33,12 +33,58 @@ $transition-fast: 100ms ease-in-out;
 
 $bannerHeight: 40rem;
 
+//animations / keyframes
+
+@keyframes openUp {
+  0% {
+    width: 1%;
+    height: 0;
+    display: none;
+    overflow: hidden;
+  }
+
+  50% {
+    width: 30%;
+    display: block !important;
+    height: 1rem;
+  }
+
+  75% {
+    width: 30%;
+
+    height: 20.7rem;
+    opacity: 0.4;
+  }
+
+  100% {
+    padding: 0 $padding-small;
+    // li {
+    //   opacity: 1;
+    //   padding: 0 $padding-medium;
+    // }
+    width: 31%;
+    height: 44.2rem;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 //!---------------------------------------------------------------------------------!//
 html {
   font-size: 62.5%;
   //1rem =10px
   height: 100%;
   width: 100%;
+  // filter: invert(1) hue-rotate(180deg);
 }
 
 * {
@@ -49,6 +95,7 @@ html {
   box-sizing: border-box;
 }
 body {
+  min-width: 305px;
   font-family: "segoe UI", "Tahoma", Geneva, Verdana, sans-serif;
   background: white;
   font-size: $fontSize-para;
@@ -86,10 +133,20 @@ body {
   display: none;
 }
 
-.dark-mode {
-  filter: invert(1) hue-rotate(180);
-}
+// .dark-mode {
+//   filter: invert(1) hue-rotate(180deg);
 
-.dm-inverted {
-  filter: invert(1) hue-rotate(180);
-}
+//   img,
+//   .home-cards,
+//   .main-nav,
+//   .btn,
+//   .footer,
+//   i,
+//   section .btn {
+//     filter: invert(1) hue-rotate(180deg);
+//   }
+// }
+
+// .dm-inverted {
+//   filter: invert(1) hue-rotate(180deg);
+// }
