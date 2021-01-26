@@ -1,4 +1,5 @@
 @import "./styleGuide";
+@import "./darkmode/darkMode";
 
 a {
   color: $clr-links;
@@ -19,7 +20,7 @@ a {
   display: none;
   padding: 0.5rem;
 
-  background: rgba(255, 255, 255, 0.952);
+  background: $clr-bg;
   background-blend-mode: screen;
   // backdrop-filter: blur(15px);
 
@@ -127,7 +128,7 @@ a {
         border: 2px solid black;
         padding: 0.01rem 2.6rem 0.01rem 2rem;
         outline: none;
-        background: rgb(255, 255, 255);
+        background: $clr-bg;
 
         transition: all 0.3s ease-in-out;
       }
@@ -144,8 +145,8 @@ a {
   .showcase {
     width: 100%; //width of container
     height: $bannerHeight;
-    background: rgb(212, 212, 212);
-    background-color: darken(black, 50%);
+    background: $clr-bg;
+    // background-color: darken(black, 50%);
 
     // background: url("../assets/images/SurfaceFamily-3-scaled.jpg") no-repeat
     //   center center/cover;
@@ -207,7 +208,7 @@ a {
 .xbox {
   width: 100%;
   height: $bannerHeight;
-  background: red;
+  background: $clr-bg;
   background: url("../assets/images/xboxOne.jpg") no-repeat center center/cover;
   color: white;
   margin-bottom: $margin-small;
@@ -260,7 +261,7 @@ a {
 //Footer links
 
 .link {
-  background: whitesmoke;
+  background: $clr-bg;
   color: rgb(70, 70, 70);
   font-size: $fontSize-menu;
   padding: $padding-xLarge 0;
@@ -279,7 +280,7 @@ a {
 
 .footer {
   width: 100%;
-  background: whitesmoke;
+  background: $clr-bg;
   color: rgb(70, 70, 70);
   font-size: $fontSize-menu;
 
@@ -318,6 +319,9 @@ a {
 //700 px and below
 
 @media (max-width: 720px) {
+  // .toggle-container {
+  //   display: inline-block !important;
+  // }
   .main-nav {
     position: relative;
 

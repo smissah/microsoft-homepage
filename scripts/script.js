@@ -3,6 +3,28 @@ const navOpen = document.querySelector(".open");
 const menuOverlay = document.querySelector(".menu-overlay");
 const searchBtn = document.querySelector(".fa-search");
 const searchField = document.querySelector(".search-field");
+
+//! checkbox dark theme settings
+const checkbox = document.querySelector("input[name=darkModeCheck]");
+
+checkbox.addEventListener("change", () => {
+  console.log("tickbox");
+  if (checkbox.checked) {
+    trans();
+    document.documentElement.setAttribute("data-theme", "dark");
+  } else {
+    trans();
+    document.documentElement.setAttribute("data-theme", "light");
+  }
+});
+
+let trans = () => {
+  document.documentElement.classList.add("transition");
+  window.setTimeout(() => {
+    document.documentElement.classList.remove("transition");
+  }, 1000);
+};
+
 //!when the tacked menu is clicked
 navCollapsed.addEventListener("click", () => {
   navCollapsed.classList.toggle("hidden");
