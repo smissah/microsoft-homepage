@@ -20,6 +20,10 @@ html {
 }
 
 html[data-theme="dark"] {
+  $clr-links: rgb(26, 26, 26);
+  $clr-para: rgb(14, 14, 14);
+  $clr-button: rgb(26, 26, 26);
+  $clr-bg: rgb(212, 212, 212);
 }
 
 input[type="checkbox"] {
