@@ -38,6 +38,10 @@ html {
   width: 100%;
 }
 
+html[data-theme="dark"] {
+  --textColor: red;
+}
+
 * {
   list-style-type: none;
   text-decoration: none;
@@ -51,7 +55,6 @@ body {
   font-family: "segoe UI", "Tahoma", Geneva, Verdana, sans-serif;
   background: white;
   font-size: 1.6rem;
-  color: #0e0e0e;
   transition: all 0.3s ease-in-out;
   position: relative;
 }
@@ -65,10 +68,6 @@ body {
   font-weight: bold;
   outline: none;
   padding: 1rem 2rem;
-}
-
-.btn:hover {
-  background: #272727;
 }
 
 .dark {
@@ -92,12 +91,6 @@ body {
   .toggle-container {
     display: inline-block !important;
   }
-}
-
-html {
-  font-size: 62.5%;
-  height: 100%;
-  width: 100%;
 }
 
 input[type="checkbox"] {
@@ -152,7 +145,7 @@ html.transition *:after {
 }
 
 a {
-  color: #1a1a1a;
+  color: var(----textColor);
 }
 
 .menu-overlay {
@@ -164,7 +157,7 @@ a {
   height: 0;
   display: none;
   padding: 0.5rem;
-  background: rgba(255, 255, 255, 0.952);
+  background: #d4d4d4;
   background-blend-mode: screen;
 }
 
@@ -242,7 +235,7 @@ a {
 }
 
 .container .main-nav .main-menu a:hover {
-  border-bottom: solid 2px #0e0e0e;
+  border-bottom: solid 2px black;
 }
 
 .container .main-nav .right-icons {
@@ -266,7 +259,7 @@ a {
   border: 2px solid black;
   padding: 0.01rem 2.6rem 0.01rem 2rem;
   outline: none;
-  background: --bgColor;
+  background: #d4d4d4;
   transition: all 0.3s ease-in-out;
 }
 
@@ -280,8 +273,7 @@ a {
 .container .showcase {
   width: 100%;
   height: 40rem;
-  background: --bgColor;
-  background-color: black;
+  background: #d4d4d4;
   background: url("../assets/images/showcase2.jpg") no-repeat center center/cover;
   background-repeat: no-repeat;
   background-size: cover;
@@ -336,7 +328,7 @@ a {
 .xbox {
   width: 100%;
   height: 40rem;
-  background: red;
+  background: #d4d4d4;
   background: url("../assets/images/xboxOne.jpg") no-repeat center center/cover;
   color: white;
   margin-bottom: 1.5rem;
@@ -391,7 +383,7 @@ a {
 }
 
 .link {
-  background: whitesmoke;
+  background: #d4d4d4;
   color: #464646;
   font-size: 1.3rem;
   padding: 4rem 0;
@@ -411,7 +403,7 @@ a {
 
 .footer {
   width: 100%;
-  background: whitesmoke;
+  background: #d4d4d4;
   color: #464646;
   font-size: 1.3rem;
 }

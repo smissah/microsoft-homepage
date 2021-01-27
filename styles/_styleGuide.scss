@@ -9,10 +9,10 @@ $padding-xLarge: 4rem;
 $padding-xxLarge: 6rem;
 
 // colors
-// $clr-links: rgb(26, 26, 26);
-// $clr-para: rgb(14, 14, 14);
-// $clr-button: rgb(26, 26, 26);
-// $clr-bg: rgb(212, 212, 212);
+$clr-links: rgb(26, 26, 26);
+$clr-para: rgb(14, 14, 14);
+$clr-button: rgb(26, 26, 26);
+$clr-bg: rgb(212, 212, 212);
 
 // font-size
 $fontSize-para: 1.6rem;
@@ -80,11 +80,31 @@ $bannerHeight: 40rem;
 }
 
 //!---------------------------------------------------------------------------------!//
+// html {
+//   font-size: 62.5%;
+//   //1rem =10px
+//   height: 100%;
+//   width: 100%;
+// }
+
 html {
   font-size: 62.5%;
   //1rem =10px
   height: 100%;
   width: 100%;
+
+  $clr-links: rgb(26, 26, 26);
+  $clr-para: rgb(14, 14, 14);
+  $clr-button: rgb(26, 26, 26);
+  $clr-bg: rgb(212, 212, 212);
+}
+
+html[data-theme="dark"] {
+  $clr-links: rgb(26, 26, 26);
+  $clr-para: rgb(14, 14, 14);
+  $clr-button: rgb(26, 26, 26);
+  $clr-bg: rgb(15, 15, 15);
+  --textColor: red;
 }
 
 * {
@@ -114,9 +134,9 @@ body {
   outline: none;
   padding: $padding-xSmall $padding-small;
 
-  &:hover {
-    background: lighten($clr-button, 5%);
-  }
+  // &:hover {
+  //   // background: lighten($clr-button, 5%);
+  // }
 }
 
 .dark {

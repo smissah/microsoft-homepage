@@ -2,7 +2,7 @@
 @import "./darkmode/darkMode";
 
 a {
-  color: $clr-links;
+  color: var(----textColor);
 }
 
 .menu-overlay {

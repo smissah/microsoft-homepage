@@ -7,21 +7,22 @@ const searchField = document.querySelector(".search-field");
 //! checkbox dark theme settings
 const checkbox = document.querySelector("input[name=darkModeCheck]");
 
+const htmlElement = document.documentElement;
 checkbox.addEventListener("change", () => {
   console.log("tickbox");
   if (checkbox.checked) {
     trans();
-    document.documentElement.setAttribute("data-theme", "dark");
+    htmlElement.setAttribute("data-theme", "dark");
   } else {
     trans();
-    document.documentElement.setAttribute("data-theme", "light");
+    htmlElement.setAttribute("data-theme", "light");
   }
 });
 
 let trans = () => {
-  document.documentElement.classList.add("transition");
+  htmlElement.classList.add("transition");
   window.setTimeout(() => {
-    document.documentElement.classList.remove("transition");
+    htmlElement.classList.remove("transition");
   }, 1000);
 };
 
