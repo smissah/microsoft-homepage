@@ -9,10 +9,14 @@ $padding-xLarge: 4rem;
 $padding-xxLarge: 6rem;
 
 // colors
-$clr-links: rgb(26, 26, 26);
-$clr-para: rgb(14, 14, 14);
-$clr-button: rgb(26, 26, 26);
-$clr-bg: rgb(212, 212, 212);
+// $clr-links: rgb(26, 26, 26);
+// $clr-para: rgb(14, 14, 14);
+// $clr-button: rgb(26, 26, 26);
+// $clr-bg: rgb(212, 212, 212);
+// --clrLinks: #fcfcfc;
+// --clrPara: rgb(14, 14, 14);
+// --clrButton: rgb(26, 26, 26);
+// --clrBackground: rgb(212, 212, 212);
 
 // font-size
 $fontSize-para: 1.6rem;
@@ -93,18 +97,27 @@ html {
   height: 100%;
   width: 100%;
 
-  $clr-links: rgb(26, 26, 26);
-  $clr-para: rgb(14, 14, 14);
-  $clr-button: rgb(26, 26, 26);
-  $clr-bg: rgb(212, 212, 212);
+  --clrLinks: #fcfcfc;
+  --clrParaLite: rgb(223, 223, 223);
+  --clrPara: rgb(14, 14, 14);
+  --clrButton: rgb(26, 26, 26);
+  --clrButtonLite: rgb(26, 26, 26);
+  --clrBackground: rgb(255, 255, 255);
+  --clrIcons: rgb(24, 24, 24);
+  --clrCardsLink: rgb(5, 113, 175);
+  --clr-footer: rgb(70, 70, 70);
 }
 
 html[data-theme="dark"] {
-  $clr-links: rgb(26, 26, 26);
-  $clr-para: rgb(14, 14, 14);
-  $clr-button: rgb(26, 26, 26);
-  $clr-bg: rgb(15, 15, 15);
-  --textColor: red;
+  --clrLinks: #fcfcfc;
+  --clrParaLite: rgb(223, 223, 223);
+  --clrPara: rgb(236, 236, 236);
+  --clrButton: rgb(26, 26, 26);
+  --clrButtonLite: rgb(26, 26, 26);
+  --clrBackground: rgb(49, 49, 49);
+  --clrIcons: rgb(230, 230, 230);
+  --clrCardsLink: rgb(43, 143, 201);
+  --clr-footer: rgb(226, 226, 226);
 }
 
 * {
@@ -117,7 +130,7 @@ html[data-theme="dark"] {
 body {
   min-width: 305px;
   font-family: "segoe UI", "Tahoma", Geneva, Verdana, sans-serif;
-  background: white;
+  background: var(--clrBackground);
   font-size: $fontSize-para;
   // color: $clr-para;
   transition: all 0.3s ease-in-out;
@@ -126,8 +139,8 @@ body {
 
 .btn {
   border: 0;
-  background: rgb(26, 26, 26);
-  color: white;
+  background: var(--clrButton);
+  color: var(--clrParaLite);
   display: inline-block;
   font-size: 1.5rem;
   font-weight: bold;
@@ -140,11 +153,11 @@ body {
 }
 
 .dark {
-  color: white;
+  color: var(--clrParaLite);
   //!if dark do that ^
   .btn {
-    background-color: white;
-    color: black;
+    background-color: var(--clrButtonLite);
+    color: var(--clrPara);
     //! theres a button with a dark - style it like this^
   }
 }

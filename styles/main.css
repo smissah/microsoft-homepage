@@ -36,10 +36,27 @@ html {
   font-size: 62.5%;
   height: 100%;
   width: 100%;
+  --clrLinks: #fcfcfc;
+  --clrParaLite: rgb(223, 223, 223);
+  --clrPara: rgb(14, 14, 14);
+  --clrButton: rgb(26, 26, 26);
+  --clrButtonLite: rgb(26, 26, 26);
+  --clrBackground: rgb(255, 255, 255);
+  --clrIcons: rgb(24, 24, 24);
+  --clrCardsLink: rgb(5, 113, 175);
+  --clr-footer: rgb(70, 70, 70);
 }
 
 html[data-theme="dark"] {
-  --textColor: red;
+  --clrLinks: #fcfcfc;
+  --clrParaLite: rgb(223, 223, 223);
+  --clrPara: rgb(236, 236, 236);
+  --clrButton: rgb(26, 26, 26);
+  --clrButtonLite: rgb(26, 26, 26);
+  --clrBackground: rgb(49, 49, 49);
+  --clrIcons: rgb(230, 230, 230);
+  --clrCardsLink: rgb(43, 143, 201);
+  --clr-footer: rgb(226, 226, 226);
 }
 
 * {
@@ -53,7 +70,7 @@ html[data-theme="dark"] {
 body {
   min-width: 305px;
   font-family: "segoe UI", "Tahoma", Geneva, Verdana, sans-serif;
-  background: white;
+  background: var(--clrBackground);
   font-size: 1.6rem;
   transition: all 0.3s ease-in-out;
   position: relative;
@@ -61,8 +78,8 @@ body {
 
 .btn {
   border: 0;
-  background: #1a1a1a;
-  color: white;
+  background: var(--clrButton);
+  color: var(--clrParaLite);
   display: inline-block;
   font-size: 1.5rem;
   font-weight: bold;
@@ -71,12 +88,12 @@ body {
 }
 
 .dark {
-  color: white;
+  color: var(--clrParaLite);
 }
 
 .dark .btn {
-  background-color: white;
-  color: black;
+  background-color: var(--clrButtonLite);
+  color: var(--clrPara);
 }
 
 .hidden {
@@ -101,6 +118,7 @@ input[type="checkbox"] {
 
 input[type="checkbox"]:checked + label {
   background: var(black);
+  filter: invert(1);
 }
 
 input[type="checkbox"]:checked + label:after {
@@ -145,7 +163,11 @@ html.transition *:after {
 }
 
 a {
-  color: var(----textColor);
+  color: var(--clrCardsLink);
+}
+
+i {
+  color: var(--clrIcons);
 }
 
 .menu-overlay {
@@ -157,7 +179,7 @@ a {
   height: 0;
   display: none;
   padding: 0.5rem;
-  background: #d4d4d4;
+  background: var(--clrBackground);
   background-blend-mode: screen;
 }
 
@@ -235,7 +257,7 @@ a {
 }
 
 .container .main-nav .main-menu a:hover {
-  border-bottom: solid 2px black;
+  border-bottom: solid 2px var(--clrButton);
 }
 
 .container .main-nav .right-icons {
@@ -256,10 +278,10 @@ a {
   display: inline-block !important;
   height: 2.5rem;
   width: 20rem;
-  border: 2px solid black;
+  border: 2px solid var(--clrButton);
   padding: 0.01rem 2.6rem 0.01rem 2rem;
   outline: none;
-  background: #d4d4d4;
+  background: var(--clrBackground);
   transition: all 0.3s ease-in-out;
 }
 
@@ -273,7 +295,6 @@ a {
 .container .showcase {
   width: 100%;
   height: 40rem;
-  background: #d4d4d4;
   background: url("../assets/images/showcase2.jpg") no-repeat center center/cover;
   background-repeat: no-repeat;
   background-size: cover;
@@ -287,7 +308,7 @@ a {
 
 .container .showcase h2,
 .container .showcase p {
-  color: white;
+  color: var(--clrParaLite);
   margin-bottom: 1.5rem;
 }
 
@@ -309,12 +330,17 @@ a {
 
 .home-cards h3 {
   margin-bottom: 1.5rem;
+  color: var(--clrPara);
+}
+
+.home-cards p {
+  color: var(--clrPara);
 }
 
 .home-cards a {
   display: inline-block;
   padding: 2rem 0.25rem;
-  color: #0f85e6;
+  color: var(--clrCardsLink);
   text-transform: uppercase;
   font-weight: bold;
   font-size: 1.1rem;
@@ -328,9 +354,7 @@ a {
 .xbox {
   width: 100%;
   height: 40rem;
-  background: #d4d4d4;
   background: url("../assets/images/xboxOne.jpg") no-repeat center center/cover;
-  color: white;
   margin-bottom: 1.5rem;
 }
 
@@ -343,12 +367,14 @@ a {
   margin: 1.5rem 0 2rem;
 }
 
+.xbox .content button {
+  color: var(--clrParaLite);
+}
+
 .edge-banner {
   height: 40rem;
   width: 100%;
   background: url("../assets/images/edge.jfif") no-repeat center center/cover;
-  background-blend-mode: darken;
-  mix-blend-mode: darken;
 }
 
 .edge-banner .content {
@@ -357,7 +383,7 @@ a {
 }
 
 .edge-banner .content h2 {
-  color: white;
+  color: var(--clrParaLite);
 }
 
 .edge-banner .content p {
@@ -383,8 +409,8 @@ a {
 }
 
 .link {
-  background: #d4d4d4;
-  color: #464646;
+  background: var(--clrBackground);
+  color: var(--clr-footer);
   font-size: 1.3rem;
   padding: 4rem 0;
   line-height: 2rem;
@@ -403,8 +429,8 @@ a {
 
 .footer {
   width: 100%;
-  background: #d4d4d4;
-  color: #464646;
+  background: var(--clrBackground);
+  color: var(--clr-footer);
   font-size: 1.3rem;
 }
 

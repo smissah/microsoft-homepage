@@ -2,7 +2,10 @@
 @import "./darkmode/darkMode";
 
 a {
-  color: var(----textColor);
+  color: var(--clrCardsLink);
+}
+i {
+  color: var(--clrIcons);
 }
 
 .menu-overlay {
@@ -20,7 +23,7 @@ a {
   display: none;
   padding: 0.5rem;
 
-  background: $clr-bg;
+  background: var(--clrBackground);
   background-blend-mode: screen;
   // backdrop-filter: blur(15px);
 
@@ -99,7 +102,7 @@ a {
 
         border-bottom: none;
         &:hover {
-          border-bottom: solid 2px black;
+          border-bottom: solid 2px var(--clrButton);
         }
       }
     }
@@ -125,10 +128,10 @@ a {
         height: 2.5rem;
         width: 20rem;
 
-        border: 2px solid black;
+        border: 2px solid var(--clrButton);
         padding: 0.01rem 2.6rem 0.01rem 2rem;
         outline: none;
-        background: $clr-bg;
+        background: var(--clrBackground);
 
         transition: all 0.3s ease-in-out;
       }
@@ -145,8 +148,6 @@ a {
   .showcase {
     width: 100%; //width of container
     height: $bannerHeight;
-    background: $clr-bg;
-    // background-color: darken(black, 50%);
 
     // background: url("../assets/images/SurfaceFamily-3-scaled.jpg") no-repeat
     //   center center/cover;
@@ -165,7 +166,7 @@ a {
 
     h2,
     p {
-      color: white;
+      color: var(--clrParaLite);
       margin-bottom: $margin-small;
     }
     .btn {
@@ -187,11 +188,16 @@ a {
   }
   h3 {
     margin-bottom: $margin-small;
+    color: var(--clrPara);
+  }
+
+  p {
+    color: var(--clrPara);
   }
   a {
     display: inline-block;
     padding: $padding-small $padding-xxSmall;
-    color: rgb(15, 133, 230);
+    color: var(--clrCardsLink);
     text-transform: uppercase;
     font-weight: bold;
     font-size: 1.1rem;
@@ -208,15 +214,19 @@ a {
 .xbox {
   width: 100%;
   height: $bannerHeight;
-  background: $clr-bg;
+
   background: url("../assets/images/xboxOne.jpg") no-repeat center center/cover;
-  color: white;
+
   margin-bottom: $margin-small;
   .content {
     width: 40%;
     padding: 5rem 0 0 3rem;
     p {
       margin: $margin-small 0 $margin-medium;
+    }
+
+    button {
+      color: var(--clrParaLite);
     }
   }
 }
@@ -226,14 +236,12 @@ a {
 
   width: 100%;
   background: url("../assets/images/edge.jfif") no-repeat center center/cover;
-  background-blend-mode: darken;
-  mix-blend-mode: darken;
 
   .content {
     width: 40%;
     padding: 5rem 0 0 3rem;
     h2 {
-      color: white;
+      color: var(--clrParaLite);
     }
     p {
       margin: $margin-small 0 $margin-medium;
@@ -261,8 +269,8 @@ a {
 //Footer links
 
 .link {
-  background: $clr-bg;
-  color: rgb(70, 70, 70);
+  background: var(--clrBackground);
+  color: var(--clr-footer);
   font-size: $fontSize-menu;
   padding: $padding-xLarge 0;
   line-height: 2rem;
@@ -280,8 +288,8 @@ a {
 
 .footer {
   width: 100%;
-  background: $clr-bg;
-  color: rgb(70, 70, 70);
+  background: var(--clrBackground);
+  color: var(--clr-footer);
   font-size: $fontSize-menu;
 
   .footer-inner {
