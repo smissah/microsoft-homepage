@@ -84,6 +84,27 @@ body {
   display: none;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 1.8rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #919191;
+  margin-right: 0.5rem;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #555555;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #2e2e2e;
+}
+
 a {
   color: #1a1a1a;
 }

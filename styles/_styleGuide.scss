@@ -150,3 +150,30 @@ body {
 // .dm-inverted {
 //   filter: invert(1) hue-rotate(180deg);
 // }
+
+//scrollbar
+
+/* width */
+::-webkit-scrollbar {
+  width: 1.8rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #919191;
+  // border-top-left-radius: 1rem;
+  // border-bottom-left-radius: 1rem;
+  margin-right: 0.5rem;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  // border-top-left-radius: 1rem;
+  // border-bottom-left-radius: 1rem;
+  background: rgb(85, 85, 85);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(46, 46, 46);
+}
